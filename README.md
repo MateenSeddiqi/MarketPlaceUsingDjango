@@ -1,1 +1,1 @@
-# A simple MarketPlace website Using Django
+# A simple MarketPlace website using Django
