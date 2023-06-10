@@ -22,4 +22,23 @@
         <a href="#" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700 ">Contact Seller </a>
     </div>
 </div>
+
+<div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
+    <h2 class="mb-12 text-2xl text-center ">Related items </h2>
+    <div class="grid grid-cols-3 gap-3">
+        {% for item in related_items %}
+            <div>
+                <a href="{% url 'item:details' item.id %}">
+                    <div>
+                        <img src="{{item.image.url }}" class="rounded-t-xl" alt="">
+                    </div>
+                    <div class="p-6 bg-white rounded-b-xl">
+                        <h2 class="text-2xl">{{item.name}}</h2>
+                        <p class="text-gray-500">Prices: {{item.price}}</p>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
 {% endblock %}
