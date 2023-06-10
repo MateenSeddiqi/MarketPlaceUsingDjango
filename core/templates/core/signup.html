@@ -3,8 +3,40 @@
 
 {% block content %}
 
-<div class="w-1/2 my-6 mx-auto bg-gray-100 rounded-xl">
+<div class="w-1/3 my-6 mx-auto p-6 bg-gray-100 rounded-xl">
     <h1 class="mb-6 text-3xl">Sign Up</h1>
+    <form method="POST" action=".">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label class="inline-black mb-2 ">Username</label><br>
+            {{ form.username }}
+        </div>
+
+        <div class="mb-3">
+            <label class="inline-black mb-2 ">Email </label><br>
+            {{ form.email }}
+        </div>
+
+        <div class="mb-3">
+            <label class="inline-black mb-2 ">Password</label><br>
+            {{ form.password }}
+        </div>
+
+        <div class="mb-3">
+            <label class="inline-black mb-2 ">Confirm Password</label><br>
+            {{ form.password2 }}
+        </div>
+        {% if form.errors or form.non_field_errors %}
+            <div class="mb-3 p-6 bg-red-100 rounded-xl">
+                {% for field in form %}
+                    {{field.errors}}
+                {% endfor %}
+                
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+        <button type="submit" class="py-4 px-8 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-white">Sign Up</button>
+    </form>
 </div>
 
 {% endblock %}
