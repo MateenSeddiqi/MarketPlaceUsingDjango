@@ -12,8 +12,8 @@ def details(request, pk):
 
 @login_required  
 def new(request):
-    from = NewItemForm()
+    form = NewItemForm()
     return render(request, 'item/form.html', {
-        'form':form
-        'title':'New item'
+        'form':form,
+        'title': 'New item',
     })
