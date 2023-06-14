@@ -4,5 +4,6 @@ app_name='item'
 
 urlpatterns=[
     path('<int:pk>/', views.details, name='details'),
-    path('new/', views.NewItem, name="NewItem"), 
+    path('new/', views.NewItem, name="NewItem"),
+    path('<int:pk>/delete/', views.delete, name='delete') 
 ]
