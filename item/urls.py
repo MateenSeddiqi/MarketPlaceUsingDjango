@@ -7,5 +7,5 @@ urlpatterns=[
     path('new/', views.NewItem, name="NewItem"),
     path('<int:pk>/delete/', views.delete, name='delete'),
     path('<int:pk>/EditItem/', views.EditItem, name='EditItem'), 
-    path("", views.items, name='items')
+    path("items/", views.items, name='items')
 ]
