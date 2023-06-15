@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Item
 from .forms import NewItemForm, EditItemForm
+from django.db.models import Q
 
 def details(request, pk):
     item=get_object_or_404(Item, pk=pk)
@@ -51,7 +52,12 @@ def EditItem(request, pk):
     })
 
 def items(request):
+    query= request.GET.get('query', '')
     items=Item.objects.filter(is_sold=False)
+    if query:
+        items=items.filter (Q(name__icontains=query)) 
+
     return render (request, 'item/items.html', {
-        'items':items
+        'items':items,
+        'query':query,
     }) 
