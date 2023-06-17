@@ -19,7 +19,12 @@
             <li class="py-2 px-2 rounded-xl {% if category.id == category_id %} bg-gray-200 {% endif %}">
                 <a href="{% url 'item:items' %}?query={{query}}&category={{category.id}}">{{category.name}}</a>
             </li>
+            {% endfor %}
         </ul>
+
+        <hr class="my-6">
+        <p class="font-semibolid">Category</p>
+        
     </div>
 
     <div class="col-span-3">  
