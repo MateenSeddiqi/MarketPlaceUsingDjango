@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'core',
     'item',
     'dashboard',
+    'conversation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
