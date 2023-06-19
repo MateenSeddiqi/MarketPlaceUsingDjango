@@ -17,4 +17,10 @@
     {% endfor %}
 </div>
 
+<form action="." method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="py-4 px-8 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-white">Send</button>
+</form>
+
 {% endblock %}
