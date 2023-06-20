@@ -1,5 +1,5 @@
-# A simple MarketPlace website using Django 
-* A simple Market palce website developed using Django with below descriptions: 
+# MarketPlace website using Django 
+* Market palce website developed using Django with below descriptions: 
 ## Technologies:
     1. Django Version four for backend of system
     3. HTML, CSS Tailwind for frontend of system. 
