@@ -3,7 +3,7 @@
 ## Technologies:
     1. Django Version four for backend of website.  
     3. HTML, CSS Tailwind for frontend of website. 
-    3. Db.Sqlite for Database of system 
+    3. Db.Sqlite for Database of website. 
 ## Features:
     1. User Authentication:
         1. Sign-up
