@@ -1,8 +1,8 @@
 # MarketPlace website using Django 
 * Market place website developed using Django with below descriptions: 
 ## Technologies:
-    1. Django Version four for backend of website 
-    3. HTML, CSS Tailwind for frontend of system. 
+    1. Django Version four for backend of website.  
+    3. HTML, CSS Tailwind for frontend of website. 
     3. Db.Sqlite for Database of system 
 ## Features:
     1. User Authentication:
