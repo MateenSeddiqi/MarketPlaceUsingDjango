@@ -4,6 +4,7 @@ from .models import Item, Category
 from .forms import NewItemForm, EditItemForm
 from django.db.models import Q
 
+@login_required 
 def details(request, pk):
     item=get_object_or_404(Item, pk=pk)
     related_items=Item.objects.filter(category=item.category,is_sold=False).exclude(pk=pk)[0:3]
@@ -51,6 +52,7 @@ def EditItem(request, pk):
         'title': 'Edit item',
     })
 
+@login_required  
 def items(request):
     query= request.GET.get('query', '')
     category_id=request.GET.get('category', 0)
