@@ -8,6 +8,7 @@
     1. User Authentication:
         1. Sign-up
         2. Log-in
+        3. Logout
     2. CRUD operations:
          1. Creating new item by users 
          2. Read item by the users
